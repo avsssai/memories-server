@@ -14,6 +14,9 @@ app.use(cors());
 app.use(morgan("dev"));
 
 //ROUTES
+app.get("/", (req, res) => {
+	res.send("Welcome to Memories API!");
+});
 app.use("/posts", postRoutes);
 
 const PORT = process.env.PORT || 5000;
